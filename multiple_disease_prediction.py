@@ -13,13 +13,16 @@ import os
 
 
 
+
+
+# Get the directory where your script is currently located
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Define paths to your models inside the 'saved_models' folder
-# Make sure these filenames match exactly what is in your GitHub folder
-diabetes_model = pickle.load(open(f'{working_dir}/saved_models/diabetes_model.sav', 'rb'))
-heart_model = pickle.load(open(f'{working_dir}/saved_models/heart_disease_model.sav', 'rb'))
-parkinsons_model = pickle.load(open(f'{working_dir}/saved_models/parkinsons_model.sav', 'rb'))
+# Define the paths relative to your script's location
+# Ensure the filenames match the ones in your 'saved_models' folder exactly
+diabetes_model = pickle.load(open(os.path.join(working_dir, 'saved_models', 'diabetes_trained_model.sav'), 'rb'))
+heart_disease_model = pickle.load(open(os.path.join(working_dir, 'saved_models', 'heart_disease_model.sav'), 'rb'))
+parkinsons_model = pickle.load(open(os.path.join(working_dir, 'saved_models', 'parkinsons_model.sav'), 'rb'))
 
 
 
