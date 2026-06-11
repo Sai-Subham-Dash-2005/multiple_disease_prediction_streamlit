@@ -1,0 +1,1 @@
+streamlit run "C:\Users\ASUS\Downloads\Multiple_disease_prediction\multiple_disease_prediction.py"
