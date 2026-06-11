@@ -19,13 +19,10 @@ import os
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Define the paths relative to your script's location
-# Ensure the filenames match the ones in your 'saved_models' folder exactly
-diabetes_model = pickle.load(open(os.path.join(working_dir, 'saved_models', 'diabetes_trained_model.sav'), 'rb'))
-heart_disease_model = pickle.load(open(os.path.join(working_dir, 'saved_models', 'heart_disease_model.sav'), 'rb'))
-parkinsons_model = pickle.load(open(os.path.join(working_dir, 'saved_models', 'parkinsons_model.sav'), 'rb'))
-
-
-
+# Files are in the root directory, so we don't need 'saved_models' in the path
+diabetes_model = pickle.load(open(os.path.join(working_dir, 'diabetes_trained_model.sav'), 'rb'))
+heart_disease_model = pickle.load(open(os.path.join(working_dir, 'heart_disease.sav'), 'rb'))
+parkinsons_model = pickle.load(open(os.path.join(working_dir, 'parkinson_model.sav'), 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
